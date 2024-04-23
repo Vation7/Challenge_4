@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Blog Personal - Entradas</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/blog.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Mi Blog Personal</h1>
-      <button id="theme-toggle">Cambiar tema</button>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Blog Personal - Entradas</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/blog.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi Blog Personal</h1>
+    <button id="theme-toggle">Cambiar tema</button> </header>
 
-    <main>
-      <div class="posts-container"></div>
-    </main>
+  <main>
+    <div class="posts-container"></div>
+  </main>
 
-    <footer>
-      <p>&copy; 2024 Mi Blog Personal</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Mi Blog Personal</p>
+  </footer>
 
-    <script src="assets/js/blog.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-      const body = document.querySelector("body");
+  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.querySelector("body");
 
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-theme");
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-theme");
 
-        // Guarda el tema elegido en localStorage
-        if (body.classList.contains("dark-theme")) {
-          localStorage.setItem("theme", "dark");
-        } else {
-          localStorage.setItem("theme", "light");
-        }
-      });
-
-      // Función para aplicar el tema guardado al cargar la página
-      function applySavedTheme() {
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme === "dark") {
-          body.classList.add("dark-theme");
-        }
+      // Guarda el tema elegido en localStorage
+      if (body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
       }
+    });
 
-      // Ejecuta la función para aplicar el tema guardado al cargar la página
-      window.addEventListener("DOMContentLoaded", applySavedTheme);
-    </script>
-  </body>
+    // Función para aplicar el tema guardado al cargar la página
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      }
+    }
+
+    // Ejecuta la función para aplicar el tema guardado al cargar la página
+    window.addEventListener("DOMContentLoaded", applySavedTheme);
+  </script>
+</body>
 </html>
