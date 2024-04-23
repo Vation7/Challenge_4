@@ -23,5 +23,32 @@
 
     <script src="assets/js/blog.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.querySelector("body");
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+
+        // Guarda el tema elegido en localStorage
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Función para aplicar el tema guardado al cargar la página
+      function applySavedTheme() {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+          body.classList.add("dark-theme");
+        }
+      }
+
+      // Ejecuta la función para aplicar el tema guardado al cargar la página
+      window.addEventListener("DOMContentLoaded", applySavedTheme);
+    </script>
   </body>
 </html>
