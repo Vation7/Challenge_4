@@ -9,26 +9,14 @@ This project is a simple web personal blog that allows users to create and view 
 - **JavaScript:** Enables the interactive functionality of the blog, such as handling the new post form, storing data in `localStorage`, displaying posts, and switching themes.
 
 ## Estructure of the project
-
-my-blog/
-├── assets/
-│ ├── css/
-│ │ ├── blog.css
-│ │ ├── form.css
-│ │ └── styles.css
-│ └── js/
-│ ├── blog.js
-│ ├── form.js
-│ └── logic.js
-├── index.html
-├── blog.html
-└── README.md
+![Screenshot](https://raw.githubusercontent.com/Vation7/Images/main/Screenshot%202024-04-23%20at%2012.14.55%E2%80%AFa.m..png)
 
 ### Blog Example
 
-![Screenshot](path/to/blog-screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/Vation7/Images/main/Screenshot%202024-04-23%20at%2012.01.36%E2%80%AFa.m..png)
+![Screenshot](https://raw.githubusercontent.com/Vation7/Images/main/Screenshot%202024-04-23%20at%2012.03.27%E2%80%AFa.m..png)
 
-### Theme Options
+### Dark theme
 
-![Screenshot](path/to/light-theme-screenshot.png)
-![Screenshot](path/to/dark-theme-screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/Vation7/Images/main/Screenshot%202024-04-23%20at%2012.03.50%E2%80%AFa.m..png)
+![Screenshot](https://raw.githubusercontent.com/Vation7/Images/main/Screenshot%202024-04-23%20at%2012.19.02%E2%80%AFa.m..png)
